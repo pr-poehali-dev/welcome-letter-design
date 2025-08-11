@@ -112,7 +112,7 @@ const Index = () => {
           }`} style={{animationDelay: '2s'}}></div>
         </div>
         
-        <div className="relative max-w-5xl mx-auto px-8 py-24">
+        <div className="relative max-w-5xl mx-auto px-4 sm:px-6 md:px-8 py-16 sm:py-20 md:py-24">
           <div className="text-center animate-fade-in">
             <div className={`inline-flex items-center px-4 py-2 backdrop-blur-sm rounded-full border transition-colors duration-300 text-sm mb-8 ${darkMode 
               ? 'bg-gray-800/80 border-gray-700/50 text-gray-300' 
@@ -122,7 +122,7 @@ const Index = () => {
               Добро пожаловать в команду
             </div>
             
-            <h1 className={`text-6xl font-bold mb-6 tracking-tight leading-tight ${darkMode 
+            <h1 className={`text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-6 tracking-tight leading-tight ${darkMode 
               ? 'bg-gradient-to-r from-white via-gray-200 to-white bg-clip-text text-transparent' 
               : 'bg-gradient-to-r from-gray-900 via-gray-800 to-gray-900 bg-clip-text text-transparent'
             }`}>
@@ -130,11 +130,11 @@ const Index = () => {
               <span className="bg-gradient-to-r from-violet-500 to-indigo-500 bg-clip-text text-transparent">наш новый коллега!</span>
             </h1>
             
-            <p className={`text-xl max-w-3xl mx-auto leading-relaxed ${darkMode 
+            <p className={`text-base sm:text-lg md:text-xl max-w-3xl mx-auto leading-relaxed px-4 sm:px-0 ${darkMode 
               ? 'text-gray-300' 
               : 'text-gray-600'
             }`}>
-              В ваш первый рабочий день мы познакомим вас с компанией, в которую вы пришли работать. 
+              В Ваш первый рабочий день мы познакомим Вас с компанией, в которую Вы пришли работать. 
               Специализируемся на продажах на маркетплейсах.
             </p>
           </div>
@@ -142,7 +142,7 @@ const Index = () => {
       </div>
 
       {/* Content Cards */}
-      <div className="max-w-7xl mx-auto px-8 pb-24">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-8 pb-16 sm:pb-20 md:pb-24">
         <div className="grid lg:grid-cols-3 md:grid-cols-2 gap-8">
           
           {/* О компании */}
