@@ -172,6 +172,8 @@ const Index = () => {
                     </div>
                   </button>
                 ))}
+              </div>
+            </div>
           </div>
         </div>
       </div>
