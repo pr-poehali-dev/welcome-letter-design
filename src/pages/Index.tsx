@@ -179,7 +179,7 @@ const Index = () => {
       </div>
 
       {/* Hero Section */}
-      <div id="hero" className="relative overflow-hidden pt-32">
+      <div id="hero" className="relative overflow-hidden pt-56 md:pt-32">
         <div className={`absolute inset-0 transition-opacity duration-500 ${darkMode 
           ? 'bg-gradient-to-br from-violet-900/20 via-blue-900/20 to-indigo-900/20' 
           : 'bg-gradient-to-br from-violet-600/10 via-blue-600/10 to-indigo-600/10'
@@ -209,7 +209,7 @@ const Index = () => {
               ? 'bg-gradient-to-r from-white via-gray-200 to-white bg-clip-text text-transparent' 
               : 'bg-gradient-to-r from-gray-900 via-gray-800 to-gray-900 bg-clip-text text-transparent'
             }`}>
-              Приветствуем вас,<br />
+              Приветствуем Вас,<br />
               <span className="bg-gradient-to-r from-violet-500 to-indigo-500 bg-clip-text text-transparent">наш новый коллега!</span>
             </h1>
             
