@@ -93,93 +93,10 @@ const Index = () => {
         </Button>
       </div>
 
-      {/* Enhanced Progress Bar */}
-      <div className="fixed top-6 left-6 right-6 z-40">
-        <div className="max-w-5xl mx-auto">
-          <div className={`backdrop-blur-xl rounded-3xl border transition-all duration-300 shadow-xl ${darkMode 
-            ? 'bg-gray-800/40 border-gray-700/30 shadow-black/20' 
-            : 'bg-white/40 border-white/30 shadow-gray-200/30'
-          }`}>
-            <div className="p-6">
-              {/* Header */}
-              <div className="flex items-center justify-between mb-4">
-                <div className="flex items-center space-x-3">
-                  <div className={`p-2 rounded-xl ${darkMode ? 'bg-violet-500/20' : 'bg-violet-100'}`}>
-                    <Icon name="Rocket" size={20} className="text-violet-500" />
-                  </div>
-                  <div>
-                    <h3 className={`font-bold text-lg ${darkMode ? 'text-white' : 'text-gray-900'}`}>
-                      Прогресс онбординга
-                    </h3>
-                    <p className={`text-sm ${darkMode ? 'text-gray-400' : 'text-gray-600'}`}>
-                      Ваш путь к успешному старту
-                    </p>
-                  </div>
-                </div>
-                <div className={`px-4 py-2 rounded-xl font-bold text-lg ${darkMode 
-                  ? 'bg-gradient-to-r from-violet-900/50 to-indigo-900/50 text-violet-300 border border-violet-700/50' 
-                  : 'bg-gradient-to-r from-violet-100 to-indigo-100 text-violet-700 border border-violet-200'
-                }`}>
-                  {completedSteps.size}/5
-                </div>
-              </div>
 
-              {/* Progress Bar */}
-              <div className="mb-6">
-                <Progress 
-                  value={progress} 
-                  className={`h-3 ${darkMode ? 'bg-gray-700/50' : 'bg-gray-200/50'}`}
-                />
-              </div>
-
-              {/* Steps Navigation */}
-              <div className="grid grid-cols-1 md:grid-cols-5 gap-3">
-                {steps.map((step, index) => (
-                  <button
-                    key={step.id}
-                    onClick={() => scrollToSection(step.id)}
-                    className={`group p-4 rounded-2xl transition-all duration-300 hover:scale-105 ${
-                      step.completed 
-                        ? (darkMode 
-                          ? 'bg-gradient-to-br from-green-900/40 to-emerald-900/40 border border-green-700/50 shadow-lg shadow-green-900/20' 
-                          : 'bg-gradient-to-br from-green-50 to-emerald-50 border border-green-200/50 shadow-lg shadow-green-200/30'
-                        )
-                        : (darkMode 
-                          ? 'bg-gray-800/40 border border-gray-700/50 hover:bg-gray-700/60' 
-                          : 'bg-white/40 border border-white/50 hover:bg-white/60'
-                        )
-                    }`}
-                  >
-                    <div className="flex flex-col items-center space-y-2">
-                      <div className={`p-2 rounded-xl transition-all duration-300 ${
-                        step.completed 
-                          ? (darkMode ? 'bg-green-800/50' : 'bg-green-100') 
-                          : (darkMode ? 'bg-gray-700/50 group-hover:bg-gray-600/50' : 'bg-gray-100 group-hover:bg-gray-200')
-                      }`}>
-                        <Icon 
-                          name={step.completed ? "CheckCircle2" : "Circle"} 
-                          size={18} 
-                          className={step.completed ? 'text-green-500' : (darkMode ? 'text-gray-400' : 'text-gray-500')}
-                        />
-                      </div>
-                      <p className={`text-xs font-medium text-center leading-tight ${
-                        step.completed 
-                          ? (darkMode ? 'text-green-300' : 'text-green-700')
-                          : (darkMode ? 'text-gray-300 group-hover:text-white' : 'text-gray-600 group-hover:text-gray-800')
-                      }`}>
-                        {step.title}
-                      </p>
-                    </div>
-                  </button>
-                ))}
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
 
       {/* Hero Section */}
-      <div id="hero" className="relative overflow-hidden pt-56 md:pt-32">
+      <div id="hero" className="relative overflow-hidden pt-32">
         <div className={`absolute inset-0 transition-opacity duration-500 ${darkMode 
           ? 'bg-gradient-to-br from-violet-900/20 via-blue-900/20 to-indigo-900/20' 
           : 'bg-gradient-to-br from-violet-600/10 via-blue-600/10 to-indigo-600/10'
