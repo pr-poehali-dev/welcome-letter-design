@@ -178,10 +178,7 @@ const Index = () => {
                     <p className="text-xs text-blue-700">Фото</p>
                   </div>
                 </div>
-                <Button className="w-full bg-blue-500 hover:bg-blue-600">
-                  <Icon name="Send" size={16} className="mr-2" />
-                  Присоединиться к чату
-                </Button>
+
               </div>
             </CardContent>
           </Card>
