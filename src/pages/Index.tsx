@@ -73,10 +73,17 @@ const Index = () => {
                 </div>
               </div>
               <div className="pt-2">
-                <Button variant="ghost" className="w-full justify-start text-violet-600 hover:text-violet-700 hover:bg-violet-50/50">
-                  <Icon name="ExternalLink" size={16} className="mr-2" />
-                  Структура компании
-                </Button>
+                <a 
+                  href="https://shelevar.bitrix24.ru/hr/structure/" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="block"
+                >
+                  <Button variant="ghost" className="w-full justify-start text-violet-600 hover:text-violet-700 hover:bg-violet-50/50">
+                    <Icon name="ExternalLink" size={16} className="mr-2" />
+                    Структура компании
+                  </Button>
+                </a>
               </div>
             </CardContent>
           </Card>
@@ -101,9 +108,14 @@ const Index = () => {
                   <Icon name="Link" size={16} className="text-emerald-600 mr-2" />
                   <h4 className="font-semibold text-emerald-800">Приглашение</h4>
                 </div>
-                <p className="text-sm text-emerald-700 font-mono bg-emerald-100/50 p-2 rounded-lg break-all">
-                  shelevar.bitrix24.ru/?secret=...
-                </p>
+                <a 
+                  href="https://shelevar.bitrix24.ru/?secret=advnrbdg" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="text-sm text-emerald-700 font-mono bg-emerald-100/50 p-2 rounded-lg break-all hover:bg-emerald-200/50 transition-colors duration-200 block"
+                >
+                  shelevar.bitrix24.ru/?secret=advnrbdg
+                </a>
               </div>
               
               <div className="space-y-3">
@@ -127,10 +139,17 @@ const Index = () => {
                 </div>
               </div>
               
-              <Button className="w-full bg-gradient-to-r from-emerald-500 to-teal-600 hover:from-emerald-600 hover:to-teal-700 text-white shadow-lg shadow-emerald-500/25 hover:shadow-emerald-500/40 transition-all duration-300">
-                <Icon name="LogIn" size={16} className="mr-2" />
-                Начать регистрацию
-              </Button>
+              <a 
+                href="https://shelevar.bitrix24.ru/?secret=advnrbdg" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="block"
+              >
+                <Button className="w-full bg-gradient-to-r from-emerald-500 to-teal-600 hover:from-emerald-600 hover:to-teal-700 text-white shadow-lg shadow-emerald-500/25 hover:shadow-emerald-500/40 transition-all duration-300">
+                  <Icon name="LogIn" size={16} className="mr-2" />
+                  Начать регистрацию
+                </Button>
+              </a>
             </CardContent>
           </Card>
 
@@ -166,10 +185,17 @@ const Index = () => {
                 </div>
               </div>
               
-              <Button variant="ghost" className="w-full justify-start text-amber-600 hover:text-amber-700 hover:bg-amber-50/50">
-                <Icon name="Settings" size={16} className="mr-2" />
-                Открыть регламент
-              </Button>
+              <a 
+                href="https://shelevar.bitrix24.ru/~qeNXH" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="block"
+              >
+                <Button variant="ghost" className="w-full justify-start text-amber-600 hover:text-amber-700 hover:bg-amber-50/50">
+                  <Icon name="Settings" size={16} className="mr-2" />
+                  Открыть регламент
+                </Button>
+              </a>
             </CardContent>
           </Card>
 
