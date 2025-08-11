@@ -56,10 +56,27 @@ const Index = () => {
   ];
 
   return (
-    <div className={`min-h-screen transition-colors duration-500 ${darkMode 
+    <div className={`min-h-screen transition-colors duration-500 relative overflow-hidden ${darkMode 
       ? 'bg-gradient-to-br from-gray-900 via-slate-900 to-zinc-900' 
       : 'bg-gradient-to-br from-slate-50 via-gray-50 to-zinc-50'
     }`}>
+      
+      {/* Enhanced Background Elements */}
+      <div className="fixed inset-0 overflow-hidden pointer-events-none">
+        {/* Large floating orbs */}
+        <div className={`absolute -top-40 -left-40 w-80 h-80 rounded-full blur-3xl animate-float opacity-30 ${darkMode ? 'bg-violet-500/20' : 'bg-violet-300/40'}`}></div>
+        <div className={`absolute top-1/4 -right-32 w-96 h-96 rounded-full blur-3xl animate-float opacity-25 ${darkMode ? 'bg-blue-500/20' : 'bg-blue-300/40'}`} style={{animationDelay: '2s'}}></div>
+        <div className={`absolute bottom-1/4 -left-32 w-72 h-72 rounded-full blur-3xl animate-float opacity-20 ${darkMode ? 'bg-indigo-500/20' : 'bg-indigo-300/40'}`} style={{animationDelay: '4s'}}></div>
+        <div className={`absolute -bottom-40 -right-40 w-88 h-88 rounded-full blur-3xl animate-float opacity-30 ${darkMode ? 'bg-purple-500/20' : 'bg-purple-300/40'}`} style={{animationDelay: '1s'}}></div>
+        
+        {/* Medium floating elements */}
+        <div className={`absolute top-1/3 left-1/4 w-48 h-48 rounded-full blur-2xl animate-float opacity-20 ${darkMode ? 'bg-emerald-500/15' : 'bg-emerald-300/30'}`} style={{animationDelay: '3s'}}></div>
+        <div className={`absolute bottom-1/3 right-1/4 w-56 h-56 rounded-full blur-2xl animate-float opacity-25 ${darkMode ? 'bg-pink-500/15' : 'bg-pink-300/30'}`} style={{animationDelay: '5s'}}></div>
+        
+        {/* Small accent elements */}
+        <div className={`absolute top-1/2 left-1/3 w-32 h-32 rounded-full blur-xl animate-float opacity-40 ${darkMode ? 'bg-amber-500/20' : 'bg-amber-300/50'}`} style={{animationDelay: '6s'}}></div>
+        <div className={`absolute top-3/4 right-1/3 w-40 h-40 rounded-full blur-xl animate-float opacity-30 ${darkMode ? 'bg-cyan-500/20' : 'bg-cyan-300/50'}`} style={{animationDelay: '7s'}}></div>
+      </div>
       
       {/* Theme Toggle */}
       <div className="fixed top-6 right-6 z-50">
@@ -67,45 +84,94 @@ const Index = () => {
           onClick={toggleTheme}
           variant="ghost"
           size="sm"
-          className={`p-3 rounded-full backdrop-blur-sm transition-all duration-300 ${darkMode 
-            ? 'bg-white/10 hover:bg-white/20 text-white' 
-            : 'bg-black/10 hover:bg-black/20 text-gray-900'
+          className={`p-3 rounded-2xl backdrop-blur-xl border transition-all duration-300 hover:scale-105 ${darkMode 
+            ? 'bg-gray-800/60 hover:bg-gray-700/80 text-white border-gray-700/50 shadow-lg shadow-black/20' 
+            : 'bg-white/60 hover:bg-white/80 text-gray-900 border-white/50 shadow-lg shadow-gray-200/50'
           }`}
         >
           <Icon name={darkMode ? "Sun" : "Moon"} size={20} />
         </Button>
       </div>
 
-      {/* Progress Bar */}
-      <div className="fixed top-0 left-0 right-0 z-40 p-6">
-        <div className={`max-w-4xl mx-auto backdrop-blur-sm rounded-full p-4 transition-colors duration-300 ${darkMode 
-          ? 'bg-gray-900/50 border border-gray-700/50' 
-          : 'bg-white/50 border border-gray-200/50'
-        }`}>
-          <div className="flex items-center justify-between mb-3">
-            <h3 className={`font-semibold ${darkMode ? 'text-white' : 'text-gray-900'}`}>
-              Прогресс онбординга
-            </h3>
-            <span className={`text-sm font-medium ${darkMode ? 'text-gray-300' : 'text-gray-600'}`}>
-              {completedSteps.size}/5
-            </span>
-          </div>
-          <Progress value={progress} className="h-2 mb-4" />
-          <div className="flex justify-between">
-            {steps.map((step, index) => (
-              <button
-                key={step.id}
-                onClick={() => scrollToSection(step.id)}
-                className={`flex items-center space-x-2 text-xs px-3 py-1 rounded-full transition-all duration-300 ${
-                  step.completed 
-                    ? (darkMode ? 'bg-green-900/50 text-green-300' : 'bg-green-100 text-green-700')
-                    : (darkMode ? 'bg-gray-800 text-gray-400 hover:bg-gray-700' : 'bg-gray-100 text-gray-600 hover:bg-gray-200')
-                }`}
-              >
-                <Icon name={step.completed ? "CheckCircle" : "Circle"} size={14} />
-                <span className="hidden md:block">{step.title}</span>
-              </button>
-            ))}
+      {/* Enhanced Progress Bar */}
+      <div className="fixed top-6 left-6 right-6 z-40">
+        <div className="max-w-5xl mx-auto">
+          <div className={`backdrop-blur-xl rounded-3xl border transition-all duration-300 shadow-xl ${darkMode 
+            ? 'bg-gray-800/40 border-gray-700/30 shadow-black/20' 
+            : 'bg-white/40 border-white/30 shadow-gray-200/30'
+          }`}>
+            <div className="p-6">
+              {/* Header */}
+              <div className="flex items-center justify-between mb-4">
+                <div className="flex items-center space-x-3">
+                  <div className={`p-2 rounded-xl ${darkMode ? 'bg-violet-500/20' : 'bg-violet-100'}`}>
+                    <Icon name="Rocket" size={20} className="text-violet-500" />
+                  </div>
+                  <div>
+                    <h3 className={`font-bold text-lg ${darkMode ? 'text-white' : 'text-gray-900'}`}>
+                      Прогресс онбординга
+                    </h3>
+                    <p className={`text-sm ${darkMode ? 'text-gray-400' : 'text-gray-600'}`}>
+                      Ваш путь к успешному старту
+                    </p>
+                  </div>
+                </div>
+                <div className={`px-4 py-2 rounded-xl font-bold text-lg ${darkMode 
+                  ? 'bg-gradient-to-r from-violet-900/50 to-indigo-900/50 text-violet-300 border border-violet-700/50' 
+                  : 'bg-gradient-to-r from-violet-100 to-indigo-100 text-violet-700 border border-violet-200'
+                }`}>
+                  {completedSteps.size}/5
+                </div>
+              </div>
+
+              {/* Progress Bar */}
+              <div className="mb-6">
+                <Progress 
+                  value={progress} 
+                  className={`h-3 ${darkMode ? 'bg-gray-700/50' : 'bg-gray-200/50'}`}
+                />
+              </div>
+
+              {/* Steps Navigation */}
+              <div className="grid grid-cols-1 md:grid-cols-5 gap-3">
+                {steps.map((step, index) => (
+                  <button
+                    key={step.id}
+                    onClick={() => scrollToSection(step.id)}
+                    className={`group p-4 rounded-2xl transition-all duration-300 hover:scale-105 ${
+                      step.completed 
+                        ? (darkMode 
+                          ? 'bg-gradient-to-br from-green-900/40 to-emerald-900/40 border border-green-700/50 shadow-lg shadow-green-900/20' 
+                          : 'bg-gradient-to-br from-green-50 to-emerald-50 border border-green-200/50 shadow-lg shadow-green-200/30'
+                        )
+                        : (darkMode 
+                          ? 'bg-gray-800/40 border border-gray-700/50 hover:bg-gray-700/60' 
+                          : 'bg-white/40 border border-white/50 hover:bg-white/60'
+                        )
+                    }`}
+                  >
+                    <div className="flex flex-col items-center space-y-2">
+                      <div className={`p-2 rounded-xl transition-all duration-300 ${
+                        step.completed 
+                          ? (darkMode ? 'bg-green-800/50' : 'bg-green-100') 
+                          : (darkMode ? 'bg-gray-700/50 group-hover:bg-gray-600/50' : 'bg-gray-100 group-hover:bg-gray-200')
+                      }`}>
+                        <Icon 
+                          name={step.completed ? "CheckCircle2" : "Circle"} 
+                          size={18} 
+                          className={step.completed ? 'text-green-500' : (darkMode ? 'text-gray-400' : 'text-gray-500')}
+                        />
+                      </div>
+                      <p className={`text-xs font-medium text-center leading-tight ${
+                        step.completed 
+                          ? (darkMode ? 'text-green-300' : 'text-green-700')
+                          : (darkMode ? 'text-gray-300 group-hover:text-white' : 'text-gray-600 group-hover:text-gray-800')
+                      }`}>
+                        {step.title}
+                      </p>
+                    </div>
+                  </button>
+                ))}
           </div>
         </div>
       </div>
