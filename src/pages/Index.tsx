@@ -516,6 +516,19 @@ const Index = () => {
                 <p className={`text-sm font-medium ${darkMode ? 'text-purple-400' : 'text-purple-600'}`}>Понедельник - Пятница</p>
               </div>
               
+              {/* Плашка про отдел отзывов */}
+              <div className={`backdrop-blur-sm p-4 rounded-xl border transition-colors duration-300 ${darkMode 
+                ? 'bg-amber-900/20 border-amber-800/30' 
+                : 'bg-gradient-to-br from-amber-50/80 to-orange-50/80 border-amber-100/50'
+              }`}>
+                <div className="flex items-center justify-center mb-2">
+                  <Icon name="MessageSquare" size={16} className="text-amber-500 mr-2" />
+                  <p className={`text-sm font-medium ${darkMode ? 'text-amber-300' : 'text-amber-800'}`}>
+                    Отдел по работе с отзывами работает по собственному графику
+                  </p>
+                </div>
+              </div>
+              
               <div className="grid grid-cols-2 gap-3">
                 {[
                   { icon: "Coffee", day: "Суббота", status: "Выходной" },
