@@ -270,13 +270,7 @@ const Index = () => {
                   <Icon name="Link" size={16} className="text-emerald-500 mr-2" />
                   <h4 className={`font-semibold ${darkMode ? 'text-emerald-300' : 'text-emerald-800'}`}>Приглашение</h4>
                 </div>
-                <div className={`text-sm font-mono p-2 rounded-lg break-all cursor-not-allowed opacity-60 ${darkMode 
-                    ? 'text-emerald-300 bg-emerald-900/30' 
-                    : 'text-emerald-700 bg-emerald-100/50'
-                  }`}>
-                  shelevar.bitrix24.ru/?secret=advnrbdg
-                </div>
-                <p className={`text-xs mt-2 ${darkMode ? 'text-gray-400' : 'text-gray-500'}`}>
+                <p className={`text-sm ${darkMode ? 'text-gray-400' : 'text-gray-600'}`}>
                   Активную ссылку Вы получите от HR
                 </p>
               </div>
