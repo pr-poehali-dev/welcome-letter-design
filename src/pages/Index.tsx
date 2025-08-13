@@ -517,13 +517,13 @@ const Index = () => {
               </div>
               
               {/* Плашка про отдел отзывов */}
-              <div className={`backdrop-blur-sm p-4 rounded-xl border transition-colors duration-300 ${darkMode 
-                ? 'bg-amber-900/20 border-amber-800/30' 
-                : 'bg-gradient-to-br from-amber-50/80 to-orange-50/80 border-amber-100/50'
+              <div className={`backdrop-blur-sm p-3 rounded-lg border transition-colors duration-300 ${darkMode 
+                ? 'bg-amber-900/15 border-amber-800/20' 
+                : 'bg-amber-50/60 border-amber-100/40'
               }`}>
-                <div className="flex items-center justify-center mb-2">
-                  <Icon name="MessageSquare" size={16} className="text-amber-500 mr-2" />
-                  <p className={`text-sm font-medium ${darkMode ? 'text-amber-300' : 'text-amber-800'}`}>
+                <div className="flex items-center justify-center">
+                  <Icon name="MessageSquare" size={14} className="text-amber-500 mr-2 flex-shrink-0" />
+                  <p className={`text-xs font-medium text-center leading-relaxed ${darkMode ? 'text-amber-300' : 'text-amber-700'}`}>
                     Отдел по работе с отзывами работает по собственному графику
                   </p>
                 </div>
